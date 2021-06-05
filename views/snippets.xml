@@ -22,10 +22,45 @@
         </div>
     </section>
 </template>
+<template id="home_slide" name="home slide">
+    <section class="home_slide">
+        <div class="carousel_wrapper">
+  <div class="carousel">
+    <div class="slide one">
+      <img src="/theme_dev/static/src/img/s1.jpg" />
+    </div>
+    <div class="slide two">
+      <img src="/theme_dev/static/src/img/s2.jpg" />
+    </div>
+    <div class="slide three">
+      <img src="/theme_dev/static/src/img/s3.jpg" />
+    </div>
+    <div class="slide four">
+      <img src="/theme_dev/static/src/img/s4.jpg" />
+    </div>
+    <div class="slide five">
+      <img src="/theme_dev/static/src/img/s5.jpg" />
+    </div>
+    <div class="slide six">
+      <img src="/theme_dev/static/src/img/s6.jpg" />
+    </div>
+    <div class="slide seven">
+      <img src="/theme_dev/static/src/img/s7.jpg" />
+    </div>
+    <div class="slide eight">
+      <img src="/theme_dev/static/src/img/s8.jpg" />
+    </div>
+    <div class="slide nine">
+      <img src="/theme_dev/static/src/img/s9.jpg" />
+    </div>
+  </div>
+</div>
+</section>
+</template>
+
 <template id="home_monial" name="home snippet">
     <section class="home_monial">
-        <div class="container">
-            <dvi class="container h-100">
+     <dvi class="container h-100">
     <div class="d-flex justify-content-center">
         <div class="card mt-5 col-md-4 animated bounceInDown myForm">
             <div class="card-header">
@@ -68,12 +103,11 @@
             </div>
         </div>
     </div>
-    </dvi>
-        </div>
+    </dvi>        
     </section>
 </template>
-<template id="place_into_bar" inherit_id="website.snippets" name="Place into bar">
-    <xpath expr="//div[@id='snippet_structure']/div[hasclass('o_panel_body')]" position="inside">
+<template id="place_in_bar" inherit_id="website.snippets" name="Place in bar">
+    <xpath expr="//div[@id='snippet_content']/div[hasclass('o_panel_body')]" position="inside">
         <t t-snippet="theme_dev.home_monial"
                 t-thumbnail="/theme_dev/static/src/img/client_2.jpg"/>
     </xpath>
@@ -81,6 +115,12 @@
 <template id="place_into_bar" inherit_id="website.snippets" name="Place into bar">
     <xpath expr="//div[@id='snippet_structure']/div[hasclass('o_panel_body')]" position="inside">
         <t t-snippet="theme_dev.s_testimonial"
+                t-thumbnail="/theme_dev/static/src/img/client_2.jpg"/>
+    </xpath>
+</template>
+<template id="place_to_bar" inherit_id="website.snippets" name="Place to bar">
+    <xpath expr="//div[@id='snippet_feature']/div[hasclass('o_panel_body')]" position="inside">
+        <t t-snippet="theme_dev.home_slide"
                 t-thumbnail="/theme_dev/static/src/img/client_2.jpg"/>
     </xpath>
 </template>
