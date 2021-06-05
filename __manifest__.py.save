@@ -1,0 +1,11 @@
+{
+    'name': 'Master theme',
+    'description': 'This is The Theme',
+    'version': '1.0',
+    'author': 'saravana',
+    'category': 'Theme/Creative',
+
+    'depends': ['website', 'website_theme_install'],
+    'data': [
+    ],
+}

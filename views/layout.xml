@@ -1,0 +1,11 @@
+<odoo>
+<template id="custom_message" inherit_id="website.layout" name="Custom Header">
+  <xpath expr="//div[@id='wrapwrap']/main" position="before">
+    <div class="container">
+      <div class="alert alert-info" role="alert">
+        Welcome<strong>Shorepoint systems</strong>
+      </div>
+    </div>
+  </xpath>
+</template>
+</odoo>
