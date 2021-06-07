@@ -50,3 +50,10 @@ odoo.define('theme_dev.s_testimonial_options', function (require) {
    
      });
     });
+
+
+
+
+
+    
+
