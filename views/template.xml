@@ -1,4 +1,89 @@
 <odoo>
+
+    <!-- header -->
+    <template id="template_header_defaults" inherit_id="website.layout" name="Template Header Default" active="True">
+    <xpath expr="//header//nav" position="replace">
+        <nav data-name="Navbar" class="navbar navbar-expand-lg navbar-light o_colored_level o_cc shadow-sm">
+            <div id="top_menu_container" class="container justify-content-start justify-content-lg-between">
+                <!-- Brand -->
+                <t t-call="website.placeholder_header_brand">
+                    <t t-set="_link_class" t-value="'mr-4'"/>
+                </t>
+                <!-- Navbar Toggler -->
+                <t t-call="website.navbar_toggler">
+                    <t t-set="_toggler_class" t-value="'ml-auto'"/>
+                </t>
+                <!-- Navbar Collapse -->
+                <div id="top_menu_collapse" class="collapse navbar-collapse order-last order-lg-0">
+                    <t t-call="website.navbar_nav">
+                        <t t-set="_nav_class" t-value="'flex-grow-1'"/>
+                        <!-- Menu -->
+                        <t t-foreach="website.menu_id.child_id" t-as="submenu">
+                            <t t-call="website.submenu">
+                                <t t-set="item_class" t-value="'nav-item'"/>
+                                <t t-set="link_class" t-value="'nav-link'"/>
+                            </t>
+                        </t>
+                        <!-- Sign In -->
+                        <t t-call="portal.placeholder_user_sign_in">
+                            <t t-set="_item_class" t-value="'nav-item ml-lg-auto'"/>
+                            <t t-set="_link_class" t-value="'nav-link font-weight-bold'"/>
+                        </t>
+                        <!-- User Dropdown -->
+                        <t t-call="portal.user_dropdown">
+                            <t t-set="_user_name" t-value="true"/>
+                            <t t-set="_item_class" t-value="'nav-item dropdown ml-lg-auto'"/>
+                            <t t-set="_link_class" t-value="'nav-link font-weight-bold'"/>
+                        </t>
+                    </t>
+                </div>
+                <!-- Language Selector -->
+                <t t-call="website.placeholder_header_language_selector">
+                    <t t-set="_div_classes" t-value="'ml-2'"/>
+                </t>
+                <!-- Button -->
+                <div class="oe_structure oe_structure_solo" id="oe_structure_header_default_1"/>
+            </div>
+        </nav>
+    </xpath>
+</template>
+
+<template id="template_header_default_oe_structure_header_default_s" inherit_id="website.template_header_default" name="Template Header Default (oe_structure_header_default_1)">
+    <xpath expr="//*[hasclass('oe_structure')][@id='oe_structure_header_default_1']" position="replace">
+        <div class="oe_structure oe_structure_solo" id="oe_structure_header_default_1">
+            <section class="s_text_block" data-snippet="s_text_block" data-name="Text">
+                <div class="container">
+                    <a href="/contactus" class="btn btn-primary ml-4">Contact Me Now</a>
+                </div>
+            </section>
+        </div>
+    </xpath>
+</template>
+
+<template id="template_header_default_align_center" inherit_id="website.template_header_default" active="False">
+    <xpath expr="//t[@t-set='_nav_class']" position="replace">
+        <t t-set="_nav_class" t-value="'mx-auto'"/>
+    </xpath>
+</template>
+
+<template id="template_header_default_align_right" inherit_id="website.template_header_default" active="False">
+    <xpath expr="//t[@t-set='_nav_class']" position="replace">
+        <t t-set="_nav_class" t-value="'ml-auto'"/>
+    </xpath>
+</template>
+
+
+
+
+
+
+
+
+
+
+
+
+
     <template id="footer_custom" inherit_id="website.layout" name="Default" active="True">
       <xpath expr="//div[@id='footer']" position="replace">
         <div id="footer" class="oe_structure oe_structure_solo" t-ignore="true" t-if="not no_footer">
@@ -61,7 +146,61 @@
         </div>
       </xpath>
     </template>
-    
+
+
+    <template id="replace_header" inherit_id="portal.frontend_layout" name="Header">
+        <xpath expr="//header" position="replace">
+         <div class="oe_structure oe_structure_solo" id="oe_structure_header_hamburger_1">
+            <section class="s_text_block" data-snippet="s_text_block" data-name="Text">
+               
+                <div class="hdnavbar">
+
+
+
+<header>
+  <nav class="navbar navbar-expand-lg">
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-content" aria-controls="navbar-content" aria-expanded="false" aria-label="toggle-navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+      <div class="collapse navbar-collapse" id="navbar-content">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link" href="/">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/shop/">Shop</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/blogs/">Blogs</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/spoints/spoints">Employees</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/contactus/">Contacts us</a>
+          </li>
+          
+        </ul>
+      </div>
+    </nav>
+    <div class="box">
+        <div class="box-1"></div>
+        <div class="box-2"></div>
+      </div>
+    </header>
+
+
+
+                </div>  
+
+               <!-- <div class="container">
+                    <a href="/spoints/spoints/" class="btn btn-primary ml-4">Spoints</a>
+                </div>-->
+            </section>
+        </div>
+
+        </xpath>
+    </template>
 
 
 
