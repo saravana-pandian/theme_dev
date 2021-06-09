@@ -22,9 +22,105 @@
         </div>
     </section>
 </template>
+<template id="home_slide" name="home slide">
+    <section class="home_slide">
+        <div class="carousel_wrapper">
+  <div class="carousel">
+    <div class="slide one">
+      <img src="/theme_dev/static/src/img/s1.jpg" />
+    </div>
+    <div class="slide two">
+      <img src="/theme_dev/static/src/img/s2.jpg" />
+    </div>
+    <div class="slide three">
+      <img src="/theme_dev/static/src/img/s3.jpg" />
+    </div>
+    <div class="slide four">
+      <img src="/theme_dev/static/src/img/s4.jpg" />
+    </div>
+    <div class="slide five">
+      <img src="/theme_dev/static/src/img/s5.jpg" />
+    </div>
+    <div class="slide six">
+      <img src="/theme_dev/static/src/img/s6.jpg" />
+    </div>
+    <div class="slide seven">
+      <img src="/theme_dev/static/src/img/s7.jpg" />
+    </div>
+    <div class="slide eight">
+      <img src="/theme_dev/static/src/img/s8.jpg" />
+    </div>
+    <div class="slide nine">
+      <img src="/theme_dev/static/src/img/s9.jpg" />
+    </div>
+  </div>
+</div>
+</section>
+</template>
+
+<template id="home_monial" name="home snippet">
+    <section class="home_monial">
+     <dvi class="container h-100">
+    <div class="d-flex justify-content-center">
+        <div class="card mt-5 col-md-4 animated bounceInDown myForm">
+            <div class="card-header">
+                <h4>Shore Points Help box</h4>
+            </div>
+            <div class="card-body">
+                <form>
+                    <div id="dynamic_container">
+                        <div class="input-group">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text br-15"><i class="fas fa-user-graduate"></i></span>
+                            </div>
+                            <input type="text" placeholder="Your Name" class="form-control"/>
+                        </div>
+                        <div class="input-group mt-3">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text br-15"><i class="fas fa-phone-square"></i></span>
+                            </div>
+                            <input type="text" placeholder="Your Phone" class="form-control"/>
+                        </div>
+                        <div class="input-group mt-3">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text br-15"><i class="fas fa-at"></i></span>
+                            </div>
+                            <input type="email" placeholder="Your Email" class="form-control"/>
+                        </div>
+                        <div class="input-group mt-3">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text br-15"><i class="fas fa-at"></i></span>
+                            </div>
+                            <input type="text" placeholder="Your Message" class="form-control"/>
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <div class="card-footer">
+                <a class="btn btn-secondary btn-sm" id="add_more"><i class="fas fa-plus-circle"></i> Add</a>
+                <a class="btn btn-secondary btn-sm" id="remove_more"><i class="fas fa-trash-alt"></i> Remove</a>
+                <button class="btn btn-success btn-sm float-right submit_btn"><i class="fas fa-arrow-alt-circle-right"></i> Submit</button>
+            </div>
+        </div>
+    </div>
+    </dvi>        
+    </section>
+</template>
+<template id="place_in_bar" inherit_id="website.snippets" name="Place in bar">
+    <xpath expr="//div[@id='snippet_content']/div[hasclass('o_panel_body')]" position="inside">
+        <t t-snippet="theme_dev.home_monial"
+                t-thumbnail="/theme_dev/static/src/img/client_2.jpg"/>
+    </xpath>
+</template>
 <template id="place_into_bar" inherit_id="website.snippets" name="Place into bar">
     <xpath expr="//div[@id='snippet_structure']/div[hasclass('o_panel_body')]" position="inside">
         <t t-snippet="theme_dev.s_testimonial"
+                t-thumbnail="/theme_dev/static/src/img/client_2.jpg"/>
+    </xpath>
+</template>
+<template id="place_to_bar" inherit_id="website.snippets" name="Place to bar">
+    <xpath expr="//div[@id='snippet_feature']/div[hasclass('o_panel_body')]" position="inside">
+        <t t-snippet="theme_dev.home_slide"
                 t-thumbnail="/theme_dev/static/src/img/client_2.jpg"/>
     </xpath>
 </template>

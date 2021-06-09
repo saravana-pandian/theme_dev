@@ -10,6 +10,7 @@
              'views/layout.xml',
              'views/pages.xml',
              'views/snippets.xml',
-             'views/options.xml'
+             'views/options.xml',
+             'views/template.xml'
     ],
 }
